@@ -115,7 +115,13 @@ getAiringById = async (req, res) => {
         if (!airing) {
             return res.status(404).json({ message: 'Time slot not found' });
         }
-        res.status(200).json(airing);
+        // // Check if movie_id exists in the MoviesModel
+        // const movie = await MoviesModel.findOne({ m_id: airing.movie_id });
+        // if (!movie) {
+        //     return res.status(404).json({ message: 'Movie not found' });
+        // }
+
+        res.status(200).json({airing, movie});
     } catch (error) {
         console.error('Error getting airing by ID:', error);
         res.status(500).json({ error: 'Internal Server Error' });

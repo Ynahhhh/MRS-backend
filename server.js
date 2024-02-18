@@ -15,8 +15,7 @@ const express = require('express');
 const cors = require('cors'); 
 const mongoose = require('mongoose')
 
-// const detailRoutes = require('./routes/DetailsRoutes')
-
+const detailRoutes = require('./routes/DetailsRoutes')
 const movieRoutes = require('./routes/MovieRoutes')
 
 // APP
@@ -34,7 +33,8 @@ app.use((req, res, next) => {
 
 // ROUTES
 app.use('/api/movies', movieRoutes);
-// app.use('/api/details', detailRoutes);
+app.use('/api/airing', movieRoutes);
+app.use('/api/details', detailRoutes);
 
 // CONNECT TO DB
 mongoose.connect(process.env.MONGO_URI)

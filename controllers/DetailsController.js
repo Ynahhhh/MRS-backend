@@ -35,7 +35,7 @@ const updateReservation = async (req, res) => {
     })
 
     if(!reserve) {
-        return res.status(400).json({errror: 'No such Reservation'})
+        return res.status(400).json({error: 'No such Reservation'})
     }
     res.status(200).json(reserve)
 }
