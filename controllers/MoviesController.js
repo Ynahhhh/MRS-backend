@@ -87,13 +87,13 @@ getUniqueDatesByMovieId = async (req, res) => {
     }
 };
 
-// GET ALL THE TIMESLOT UNDER SPECIDIC MOVIE AND DATE
+// GET ALL THE TIMESLOT UNDER SPECIFIC MOVIE AND DATE
 // get -- movie_id, date
 const getAiringTimes = async (req, res) => {
     try {
         const { movie_id, date } = req.params;
         const selectedDate = new Date(date);
-        const airingTimes = await AiringTime.find({
+        const airingTimes = await AiringTimeModel.find({
             movie_id: movie_id,
             a_date: {
                 $gte: selectedDate, // Greater than or equal to selected date

@@ -38,7 +38,7 @@ const airingTimeSchema = new Schema({
     a_seat: [
         {
             s_id:{
-                type: Number, 
+                type: Number,
                 index: true
             },
             position: {
