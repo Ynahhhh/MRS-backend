@@ -1,0 +1,142 @@
+// MOVIES
+
+// test data for today (2)
+[
+    {
+    "m_title": "Inception",
+    "m_desc": "A thief who enters the dreams of others to steal secrets from their subconscious.",
+    "m_genre": "Action, Adventure, Sci-Fi",
+    "m_mpa": "PG-13",
+    "m_hrs": 2.5,
+    "m_poster": "https://www.imdb.com/title/tt1375666/mediaviewer/rm427909376/",
+    "startdate": "2024-02-16T00:00:00.000Z",
+    "enddate": "2024-02-24T00:00:00.000Z"
+},
+{
+    "m_title": "The Godfather",
+    "m_desc": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "m_genre": "Crime, Drama",
+    "m_mpa": "R",
+    "m_hrs": 2.75,
+    "m_poster": "https://www.imdb.com/title/tt0068646/mediaviewer/rm3697281024/",
+    "startdate": "2024-02-24T00:00:00.000Z",
+    "enddate": "2024-02-30T00:00:00.000Z"
+}
+
+
+
+]
+
+// test data within range
+[{
+    "m_title": "The Matrix",
+    "m_desc": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "m_genre": "Action, Sci-Fi",
+    "m_mpa": "R",
+    "m_hrs": 2.25,
+    "m_poster": "https://www.imdb.com/title/tt0133093/mediaviewer/rm2505168896/",
+    "startdate": "2024-04-01T00:00:00.000Z",
+    "enddate": "2024-04-30T00:00:00.000Z"
+},
+{
+    "m_title": "Forrest Gump",
+    "m_desc": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+    "m_genre": "Drama, Romance",
+    "m_mpa": "PG-13",
+    "m_hrs": 2.5,
+    "m_poster": "https://www.imdb.com/title/tt0109830/mediaviewer/rm2328880640/",
+    "startdate": "2024-04-15T00:00:00.000Z",
+    "enddate": "2024-04-30T00:00:00.000Z"
+},
+{
+    "m_title": "The Dark Knight",
+    "m_desc": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "m_genre": "Action, Crime, Drama",
+    "m_mpa": "PG-13",
+    "m_hrs": 2.5,
+    "m_poster": "https://www.imdb.com/title/tt0468569/mediaviewer/rm2137630976/",
+    "startdate": "2024-06-01T00:00:00.000Z",
+    "enddate": "2024-06-30T00:00:00.000Z"
+}
+
+
+]
+
+
+
+
+// test data no data found
+
+// SEATS
+
+// [
+    {
+        "movie_id": "1",
+        "a_type": "premiere",
+        "a_date": "2024-02-17",
+        "a_starttime": "2024-02-17T09:00:00.000Z",
+        "a_endtime": "2024-02-17T11:00:00.000Z",
+        "a_price": 10,
+        "a_cinema": 1
+    },
+    {
+        "movie_id": "1",
+        "a_type": "regular",
+        "a_date": "2024-02-17",
+        "a_starttime": "2024-02-17T13:00:00.000Z",
+        "a_endtime": "2024-02-17T15:00:00.000Z",
+        "a_price": 10,
+        "a_cinema": 1
+    },
+    {
+        "movie_id": "1",
+        "a_type": "regular",
+        "a_date": "2024-02-17",
+        "a_starttime": "2024-02-17T18:00:00.000Z",
+        "a_endtime": "2024-02-17T20:00:00.000Z",
+        "a_price": 10,
+        "a_cinema": 2
+    },
+    {
+        "movie_id": "1",
+        "a_type": "regular",
+        "a_date": "2024-02-18",
+        "a_starttime": "2024-02-18T09:00:00.000Z",
+        "a_endtime": "2024-02-18T11:30:00.000Z",
+        "a_price": 10,
+        "a_cinema": 2
+    },
+    {
+        "movie_id": "1",
+        "a_type": "regular",
+        "a_date": "2024-02-18",
+        "a_starttime": "2024-02-18T13:00:00.000Z",
+        "a_endtime": "2024-02-18T15:45:00.000Z",
+        "a_price": 10,
+        "a_cinema": 3
+    },
+    {
+        "movie_id": "1",
+        "a_type": "regular",,
+        "a_date": "2024-02-19",
+        "a_starttime": "2024-02-19T13:00:00.000Z",
+        "a_endtime": "2024-02-19T15:45:00.000Z",
+        "a_price": 10,
+        "a_cinema": 4
+    }
+]
+
+
+
+
+//
+{
+    "movie_id": "1",
+    "a_type": "regular",
+    "a_date": "2024-02-18",
+    "a_starttime": "2024-02-18T13:00:00.000Z",
+    "a_endtime": "2024-02-18T14:45:00.000Z",
+    "a_price": 10,
+    "a_cinema": 4
+}
+
