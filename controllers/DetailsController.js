@@ -7,10 +7,10 @@ const AiringTimeModel = require('../models/AiringTimeModel');
 
 // CREATE NEW 
 const createDetails = async (req, res) => {
-    const { f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id, a_id } = req.body;
+    const { f_name, m_name, l_name, senior, res_id, seat, amt_pay, is_cancel, m_id, a_id } = req.body;
 
     try {
-        const details = await Details.create({ f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id, a_id });
+        const details = await Details.create({ f_name, m_name, l_name, senior, res_id, seat, amt_pay, is_cancel, m_id, a_id });
         res.status(200).json(details);
     } catch (error) {
         res.status(400).json({ error: error.message });
@@ -40,24 +40,24 @@ const updateReservation = async (req, res) => {
     res.status(200).json(reserve)
 }
 
-// UPDATE SEAT RESERVATION
+// UPDATE SEAT OCCUPANCY
 const updateSeatOccupancy = async (req, res) => {
-    const { a_id, position } = req.params;
+    const { _id, position } = req.params;
 
     // Validate movie ID
-    if (!mongoose.Types.ObjectId.isValid(a_id)) {
-        return res.status(404).json({ error: 'Invalid movie ID' });
+    if (!mongoose.Types.ObjectId.isValid(_id)) {
+        return res.status(404).json({ error: 'Invalid ID' });
     }
 
     try {
         // Find the movie by ID
-        const details = await AiringTimeModel.findById(a_id);
+        const details = await AiringTimeModel.findById(_id);
         if (!details) {
             return res.status(404).json({ error: 'Movie not found' });
         }
 
         // Find the seat in the movie's seat array
-        const seat = details.m_seat.find(seat => seat.position === position);
+        const seat = details.a_seat.find(seat => seat.position === position);
         if (!seat) {
             return res.status(404).json({ error: 'Seat not found' });
         }
@@ -112,7 +112,7 @@ const updateSeatVacancy = async (req, res) => {
 
 
 // ************************  get airing
-getAiringById = async (req, res) => {
+const getAiringById = async (req, res) => {
     try {
         const { a_id } = req.params;
         const movie = await AiringTimeModel.findOne({ a_id });
@@ -136,7 +136,5 @@ module.exports = {
     updateReservation,
     updateSeatOccupancy,
     updateSeatVacancy,
-
-
     getAiringById,
 }

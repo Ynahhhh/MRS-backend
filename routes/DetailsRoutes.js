@@ -3,7 +3,8 @@ const {
     createDetails,
     getDetails,
     updateReservation,
-    getAiringById
+    getAiringById,
+    updateSeatOccupancy
 } = require('../controllers/DetailsController')
 
 const router = express.Router();
@@ -17,8 +18,10 @@ router.get('/', getDetails)
 // UPDATE DETAILS
 router.patch('/:id', updateReservation);
 
-router.get('/time/:a_id', getAiringById);
+// UPDATE SEAT OCCUPANCY
+router.patch('/:_id/:position', updateSeatOccupancy);
 
+router.get('/time/:a_id', getAiringById);
 
 
 module.exports = router;
