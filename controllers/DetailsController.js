@@ -7,10 +7,10 @@ const AiringTimeModel = require('../models/AiringTimeModel');
 
 // CREATE NEW 
 const createDetails = async (req, res) => {
-    const { f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id } = req.body;
+    const { f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id, a_id } = req.body;
 
     try {
-        const details = await Details.create({ f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id });
+        const details = await Details.create({ f_name, m_name, l_name, senior, res_id, seat, amt_pay, isCancel, m_id, a_id });
         res.status(200).json(details);
     } catch (error) {
         res.status(400).json({ error: error.message });
@@ -111,11 +111,32 @@ const updateSeatVacancy = async (req, res) => {
 };
 
 
+// ************************  get airing
+getAiringById = async (req, res) => {
+    try {
+        const { a_id } = req.params;
+        const movie = await AiringTimeModel.findOne({ a_id });
+        if (!movie) {
+            return res.status(404).json({ message: 'Movie not found' });
+        }
+        res.status(200).json(movie);
+    } catch (error) {
+        console.error('Error getting movie by ID:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
+// ************************ get movie by id
+
+
 // export function
 module.exports = {
     createDetails,
     getDetails,
     updateReservation,
     updateSeatOccupancy,
-    updateSeatVacancy
+    updateSeatVacancy,
+
+
+    getAiringById,
 }

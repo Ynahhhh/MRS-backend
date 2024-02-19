@@ -36,6 +36,7 @@ app.use('/api/movies', movieRoutes);
 app.use('/api/airing', movieRoutes);
 app.use('/api/details', detailRoutes);
 
+
 // CONNECT TO DB
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {

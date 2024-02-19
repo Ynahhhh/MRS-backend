@@ -38,6 +38,10 @@ const detailsSchema = new Schema({
     a_id: {
         type: String,
         required: false
+    },
+    m_id: {
+        type: String,
+        required: false
     }
 }, {timestamps: true})
 
