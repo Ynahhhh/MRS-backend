@@ -17,6 +17,8 @@ const mongoose = require('mongoose')
 
 const detailRoutes = require('./routes/DetailsRoutes')
 const movieRoutes = require('./routes/MovieRoutes')
+const reserveRoutes = require('./routes/ReserveRoutes')
+
 
 // APP
 const app = express();
@@ -35,6 +37,8 @@ app.use((req, res, next) => {
 app.use('/api/movies', movieRoutes);
 app.use('/api/airing', movieRoutes);
 app.use('/api/details', detailRoutes);
+app.use('/api/reserve', reserveRoutes);
+
 
 
 // CONNECT TO DB
