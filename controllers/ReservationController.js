@@ -48,7 +48,7 @@ const updateSeatVacancy = async (req, res) => {
         }
 
         // Update is_occupied property of the seat
-        seat.is_occupied = true;
+        seat.is_occupied = false;
 
         // Save the movie with updated seat occupancy
         await movie.save();
